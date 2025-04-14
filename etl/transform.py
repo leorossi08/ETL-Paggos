@@ -5,7 +5,6 @@ def transform_data(data):
     print("Dados extraídos (primeiras linhas):")
     print(df.head())
     if df.empty:
-        print("DataFrame está vazio após a extração.")
         return None
     
     df['timestamp'] = pd.to_datetime(df['timestamp'])
@@ -15,14 +14,15 @@ def transform_data(data):
         'wind_speed': ['mean', 'min', 'max', 'std'],
         'power': ['mean', 'min', 'max', 'std']
     }
-    df_resampled = df.resample('10min').agg(agg_funcs)
-    print("Após resample:")
-    print(df_resampled.head())
-    
-    # Ajusta os nomes das colunas
+    df_resampled = df.resample('10T').agg(agg_funcs)
+    # Altera nomes das colunas (join com underline)
     df_resampled.columns = ['_'.join(col).strip() for col in df_resampled.columns.values]
     df_resampled.reset_index(inplace=True)
     
-    print("DataFrame transformado final:")
+    print("Colunas do DataFrame transformado:")
+    print(df_resampled.columns)
+    print("DataFrame transformado (primeiras linhas):")
     print(df_resampled.head())
+    
     return df_resampled
+
