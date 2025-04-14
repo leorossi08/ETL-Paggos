@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile-api
+    container_name: etl_api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db_source
+    environment:
+      - DATABASE_URL=postgresql://user:password@db_source/source_db
+
+  etl:
+    build:
+      context: .
+      dockerfile: Dockerfile-etl
+    container_name: etl_script
+    depends_on:
+      - api
+      - db_target
+    environment:
+      - API_URL=http://api:8000
+      - TARGET_DATABASE_URL=postgresql://user:password@db_target/target_db
+
+  db_source:
+    image: postgres:14
+    container_name: db_source
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: source_db
+    volumes:
+      - ./db/source:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+
+  db_target:
+    image: postgres:14
+    container_name: db_target
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: target_db
+    volumes:
+      - ./db/target:/docker-entrypoint-initdb.d
+    ports:
+      - "5433:5432"
