@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS signal (
     id SERIAL PRIMARY KEY,
-    timestamp TIMESTAMP,
+    timestamp TIMESTAMP,   -- ou data se você preferir separar data e horário
     wind_speed_mean FLOAT,
     wind_speed_min FLOAT,
     wind_speed_max FLOAT,

@@ -12,6 +12,8 @@ services:
       - db_source
     environment:
       - DATABASE_URL=postgresql://user:password@db_source/source_db
+      - TARGET_DATABASE_URL=postgresql://user:password@db_target/target_db
+      - API_URL=http://api:8000
 
   etl:
     build:

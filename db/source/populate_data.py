@@ -13,7 +13,7 @@ def populate_data():
     cur = conn.cursor()
     
     start = datetime(2025, 4, 1, 0, 0, 0)
-    end = start + timedelta(days=10)
+    end = start + timedelta(days=20)
     current = start
     
     while current <= end:

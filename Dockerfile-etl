@@ -3,13 +3,10 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-# Copiar requirements.txt e instalar as dependências
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar o diretório etl (certifique-se de que __init__.py esteja incluso) e o arquivo de configurações
 COPY etl/ ./etl/
 COPY config.py .
 
-# Comando para executar o script ETL via módulo
 CMD ["python", "-m", "etl.etl_runner", "2025-04-05"]

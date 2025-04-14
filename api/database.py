@@ -1,5 +1,4 @@
 from sqlalchemy import create_engine, MetaData, Table, Column, DateTime, Float
-import os
 from config import DATABASE_URL
 
 engine = create_engine(DATABASE_URL)
@@ -10,8 +9,8 @@ data_table = Table(
     Column('timestamp', DateTime, primary_key=True),
     Column('wind_speed', Float),
     Column('power', Float),
-    Column('ambient_temprature', Float)
+    Column('ambient_temprature', Float)  # Use "ambient_temperature" se corrigir em todos os pontos
 )
 
-# Se desejar criar a tabela via código (opcional, visto que o container pode executar o SQL de inicialização)
+# Se preferir criar a tabela via código (opcional)
 # metadata.create_all(engine)

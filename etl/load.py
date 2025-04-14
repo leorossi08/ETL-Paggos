@@ -8,6 +8,8 @@ def load_data(df):
         return
     
     engine = create_engine(TARGET_DATABASE_URL)
+    print("Dados a serem carregados no banco destino:")
+    print(df.head())
     try:
         df.to_sql('signal', engine, if_exists='append', index=False)
         print("Dados carregados com sucesso no banco de destino!")
