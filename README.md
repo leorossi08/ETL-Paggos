@@ -22,7 +22,19 @@ Após popular o banco fonte e reiniciar o Docker (para que os dados estejam disp
 - Acessando o link:
   http://localhost:8000/data?start_date=2025-04-05T00:00:00&end_date=2025-04-06T00:00:00&fields=timestamp,wind_speed,power
   Você visualizará o JSON com os dados brutos do banco de dados source.
+
+  ![image](https://github.com/user-attachments/assets/8b5ef79c-93fb-4655-b014-384740578226)
+
 - Já para o banco de destino, acesse:
   http://localhost:8000/signal?start_date=2025-04-05T00:00:00&end_date=2025-04-05T23:59:59
   Neste endpoint, serão apresentados os dados transformados (agregados) pelo ETL.
+
+![image](https://github.com/user-attachments/assets/86a1588e-ea43-4ad8-9b66-e2230875fd77)
+
+## Melhorias a desenvolver (quem sabe até sexta...rsrs)
+
+- Aplicar mesmos conceitos para temperatura ambiente.
+- Orquestrar o script de ETL utilizando o dagster.
+- Organizar melhor e documentar o código, criando também diagramas do funcionamento deste ETL
+
 
