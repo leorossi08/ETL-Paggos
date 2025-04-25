@@ -44,13 +44,4 @@ Agregado     | http://localhost:8000/signal?start_date=2025-04-05T00:00:00&end_d
 
 Dica: ajuste start_date, end_date e (em /data) a lista de fields conforme necessário.
 
---------------------------------------------------------------------
-
-## Resumo Rápido
-
-1. **Suba** os serviços (docker-compose up -d).  
-2. **Popule** o source_db rodando populate_data.py.  
-3. **Reinicie** os contêineres.  
-4. Consulte **/data** (dados brutos) ou **/signal** (dados transformados).
-
 Pronto! 🎉
