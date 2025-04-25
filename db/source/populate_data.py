@@ -19,15 +19,15 @@ def populate_data():
     while current <= end:
         wind_speed = round(random.uniform(0, 20), 2)
         power = round(random.uniform(0, 100), 2)
-        ambient_temprature = round(random.uniform(10, 35), 2)
+        ambient_temperature = round(random.uniform(10, 35), 2)
         
         cur.execute(
             """
-            INSERT INTO data (timestamp, wind_speed, power, ambient_temprature)
+            INSERT INTO data (timestamp, wind_speed, power, ambient_temperature)
             VALUES (%s, %s, %s, %s)
             ON CONFLICT (timestamp) DO NOTHING;
             """,
-            (current, wind_speed, power, ambient_temprature)
+            (current, wind_speed, power, ambient_temperature)
         )
         current += timedelta(minutes=1)
     

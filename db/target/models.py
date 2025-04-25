@@ -17,6 +17,10 @@ class Signal(Base):
     power_min = Column(Float)
     power_max = Column(Float)
     power_std = Column(Float)
+    ambient_temperature_mean = Column(Float)
+    ambient_temperature_min = Column(Float)
+    ambient_temperature_max = Column(Float)
+    ambient_temperature_std = Column(Float)
 
 if __name__ == "__main__":
     Base.metadata.drop_all(engine)   # Opcional: para remover o esquema antigo

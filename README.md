@@ -144,6 +144,6 @@ Isso se conectará ao banco de destino (target_db) e imprimirá os registros.
    1. Inicialmente, ative o script populate_data.py para popular o banco fonte.
    2. Reinicie o Docker para carregar os dados e execute `docker-compose up --build`.
    3. Acesse os endpoints:
-      - Dados do banco fonte: http://localhost:8000/data?start_date=2025-04-05T00:00:00&end_date=2025-04-06T00:00:00&fields=timestamp,wind_speed,power
+      - Dados do banco fonte: http://localhost:8000/data?start_date=2025-04-05T00:00:00&end_date=2025-04-06T00:00:00&fields=timestamp,wind_speed,power,ambient_temperature
       - Dados do banco destino (transformados): http://localhost:8000/signal?start_date=2025-04-05T00:00:00&end_date=2025-04-05T23:59:59
    4. Utilize o script visualize_signal.py para visualizar os registros diretamente no target_db.

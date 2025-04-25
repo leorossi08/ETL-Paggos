@@ -11,10 +11,10 @@ def get_data(
     end_date: datetime,
     fields: str = Query(
         None,
-        description="Campos separados por vírgula: timestamp,wind_speed,power,ambient_temprature"
+        description="Campos separados por vírgula: timestamp,wind_speed,power,ambient_temperature"
     )
 ):
-    valid_columns = {"timestamp", "wind_speed", "power", "ambient_temprature"}
+    valid_columns = {"timestamp", "wind_speed", "power", "ambient_temperature"}
     if fields:
         columns_requested = set(f.strip() for f in fields.split(","))
         if not columns_requested.issubset(valid_columns):

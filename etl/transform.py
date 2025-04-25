@@ -12,7 +12,8 @@ def transform_data(data):
     
     agg_funcs = {
         'wind_speed': ['mean', 'min', 'max', 'std'],
-        'power': ['mean', 'min', 'max', 'std']
+        'power': ['mean', 'min', 'max', 'std'],
+        'ambient_temperature': ['mean','min', 'max', 'std']
     }
     df_resampled = df.resample('10T').agg(agg_funcs)
     # Altera nomes das colunas (join com underline)

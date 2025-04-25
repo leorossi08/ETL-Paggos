@@ -8,5 +8,9 @@ CREATE TABLE IF NOT EXISTS signal (
     power_mean FLOAT,
     power_min FLOAT,
     power_max FLOAT,
-    power_std FLOAT
+    power_std FLOAT,
+    ambient_temperature_mean FLOAT,
+    ambient_temperature_min FLOAT,
+    ambient_temperature_max FLOAT,
+    ambient_temperature_std FLOAT
 );

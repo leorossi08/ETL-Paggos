@@ -9,7 +9,7 @@ data_table = Table(
     Column('timestamp', DateTime, primary_key=True),
     Column('wind_speed', Float),
     Column('power', Float),
-    Column('ambient_temprature', Float)  # Use "ambient_temperature" se corrigir em todos os pontos
+    Column('ambient_temperature', Float)  
 )
 
 # Se preferir criar a tabela via código (opcional)

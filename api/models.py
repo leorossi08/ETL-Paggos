@@ -5,4 +5,4 @@ class DataRecord(BaseModel):
     timestamp: datetime
     wind_speed: float
     power: float
-    ambient_temprature: float
+    ambient_temperature: float

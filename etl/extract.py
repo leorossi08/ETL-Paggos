@@ -14,7 +14,7 @@ def extract_data(date_str):
     params = {
         "start_date": start_dt.isoformat(),
         "end_date": end_dt.isoformat(),
-        "fields": "timestamp,wind_speed,power"
+        "fields": "timestamp,wind_speed,power,ambient_temperature"
     }
     
     try:
