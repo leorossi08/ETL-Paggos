@@ -42,6 +42,12 @@ Tipo de dado | URL de exemplo
 Bruto        | http://localhost:8000/data?start_date=2025-04-05T00:00:00&end_date=2025-04-06T00:00:00&fields=timestamp,wind_speed,power,ambient_temperature
 Agregado     | http://localhost:8000/signal?start_date=2025-04-05T00:00:00&end_date=2025-04-05T23:59:59
 
+Dados no endpoint data
+![Imagem do WhatsApp de 2025-04-25 à(s) 14 45 32_3f3ccecc](https://github.com/user-attachments/assets/5d31b0f5-362d-4839-af8d-15d0061dffe3)
+
+Dados no endpoint signal
+![Imagem do WhatsApp de 2025-04-25 à(s) 14 45 14_5b07e0af](https://github.com/user-attachments/assets/a239ccd5-f397-4814-ae64-b3e04081c475)
+
 Dica: ajuste start_date, end_date e (em /data) a lista de fields conforme necessário.
 
 Pronto! 🎉
