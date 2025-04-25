@@ -21,8 +21,8 @@ Depois de popular o Banco Fonte e reiniciar os contêineres, você já pode cham
 
 1 — Subir a stack
 -----------------
-docker-compose build   # cria as imagens  
-docker-compose up    # inicia bancos + API  
+`docker-compose build`   # cria as imagens  
+`docker-compose up`    # inicia bancos + API  
 
 2 — Popular o Banco Fonte
 -------------------------
