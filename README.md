@@ -51,3 +51,5 @@ Dados no endpoint signal
 Dica: ajuste start_date, end_date e (em /data) a lista de fields conforme necessário.
 
 Pronto! 🎉
+
+(Primeira vez usando Docker, mas uma ideia é automatizar esse processo de popular o banco de dados e abrir os endpoints)
